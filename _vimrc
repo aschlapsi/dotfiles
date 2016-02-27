@@ -68,6 +68,7 @@ au BufNewFile,BufRead *.py
   \ set expandtab
   \ set autoindent
   \ set fileformat=unix
+au BufWritePost *.py call Flake8()
 
 " Indentation settings for full stack web development
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -79,4 +80,10 @@ au BufNewFile,BufRead *.js, *.html, *.css
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let NERDTreeIgnore=['\.pyc$', '\~$']  " ignore files in NERDTree
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
 
