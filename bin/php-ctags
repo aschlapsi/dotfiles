@@ -1,0 +1,26 @@
+#!/bin/bash
+
+PROJ_PATH=$PWD
+PROJ_TAG_FILE=$1
+CTAGS_CMD=ctags
+
+if [ ! -f "$PROJ_TAG_FILE" ]; then
+  touch "$PROJ_TAG_FILE"
+fi
+
+EXCLUDE="--exclude='.git' --exclude='.cache' --exclude='*.js' --exclude='tags'"
+
+CMD="$CTAGS_CMD \
+    -f \"$PROJ_TAG_FILE\" \
+    -h \".php\" \
+    -R \
+    $EXCLUDE \
+    --totals=yes \
+    --tag-relative=no"
+
+if [ ! -z "$2" ]; then
+  CMD=$CMD" -a \"$2\" >/dev/null 2>&1"
+fi
+
+eval $CMD >/dev/null
+

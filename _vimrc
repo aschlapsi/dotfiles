@@ -59,17 +59,6 @@ set clipboard=unnamed
 " Setup color theme
 colorscheme zenburn
 
-" PEP8 indentation for Python files
-au BufNewFile,BufRead *.py
-  \ set tabstop=4
-  \ set softtabstop=4
-  \ set shiftwidth=4
-  \ set textwidth=79
-  \ set expandtab
-  \ set autoindent
-  \ set fileformat=unix
-au BufWritePost *.py call Flake8()
-
 " Indentation settings for full stack web development
 au BufNewFile,BufRead *.js, *.html, *.css
   \ set tabstop=2
@@ -86,4 +75,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=5
+
+source $HOME/.dotfiles/vim/python.vim
+source $HOME/.dotfiles/vim/php.vim
 
