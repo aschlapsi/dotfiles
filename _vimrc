@@ -19,8 +19,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'jnurmine/Zenburn'
 
+" Color schemes
+Plugin 'jnurmine/Zenburn'
+Plugin 'tomasr/molokai'
+Plugin 'pyte'
+Plugin 'proton'
+Plugin 'vim-scripts/summerfruit256'
+Plugin 'altercation/vim-colors-solarized'
+"Plugin 'vim-scripts/beauty256'
+"Plugin 'vim-scripts/phpx'
+"Plugin 'vim-scripts/morning'
+
+" General plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vimoutliner/vimoutliner'
@@ -57,7 +68,14 @@ noremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
 set clipboard=unnamed
 
 " Setup color theme
-colorscheme zenburn
+"colorscheme zenburn
+colorscheme solarized
+
+" Setup solarized color scheme
+let g:solarized_termcolors=256
+syntax enable
+set background=light
+" colorscheme solarized
 
 " Indentation settings for full stack web development
 au BufNewFile,BufRead *.js, *.html, *.css
