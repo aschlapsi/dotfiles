@@ -1,0 +1,13 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    
+    "files.insertFinalNewline": true,
+
+    "window.zoomLevel": 0,
+	
+    "workbench.editor.showTabs": false,
+    "typescript.check.tscVersion": false,
+    "workbench.colorTheme": "Visual Studio Light"
+}
