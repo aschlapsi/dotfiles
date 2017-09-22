@@ -13,5 +13,9 @@
 {
     "key": "shift+cmd+down",
     "command": "workbench.action.navigateDown"
+},
+{
+    "key": "ctrl+shift+alt+k",
+    "command": "workbench.action.terminal.kill"
 }
 ]
