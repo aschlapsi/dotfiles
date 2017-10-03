@@ -8,6 +8,8 @@ nnoremap <buffer> <f9> :call Flake8()
 " Tags
 let g:project_tags='tags'
 
+let g:syntastic_python_checkers = ['flake8']
+
 if (executable('ctags'))
   autocmd FileType python nnoremap <buffer> <f8> :exe ':!~/.dotfiles/bin/py-ctags "' . g:project_tags . '"'<CR>
   autocmd BufWritePost *.py if filereadable(g:project_tags) | exec ':silent !~/.dotfiles/bin/py-ctags ' . g:project_tags . ' %' | endif
