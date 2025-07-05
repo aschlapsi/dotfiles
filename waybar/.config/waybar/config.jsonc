@@ -7,10 +7,11 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-	"hyprland/workspaces"
+    	  "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "pulseaudio",
@@ -19,7 +20,6 @@
 //        "hyprland/language",
         "battery",
 //        "battery#bat2",
-        "clock",
         "tray",
         "custom/power"
     ],
@@ -76,6 +76,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%A %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
