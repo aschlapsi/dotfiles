@@ -13,6 +13,7 @@ Required packages:
 - wofi
 - swaync
 - thunar
+- pavucontrol
 
 Optional packages
 
