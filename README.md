@@ -16,6 +16,8 @@ Required packages:
 
 Optional packages
 
+- btop
+- ranger
 - tmux
 - neovim
 - GNU Emacs
