@@ -7,19 +7,17 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-	"hyprland/workspaces",
+      	"hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-	"hyprland/submap",
-	"hyprland/keyboard",
+	      "hyprland/submap",
+      	"hyprland/language",
         "pulseaudio",
         "network",
-//        "keyboard-state",
-//        "hyprland/language",
         "battery",
 //        "battery#bat2",
         "tray",
@@ -32,6 +30,13 @@
             "active": "",
             "default": ""
         }
+    },
+    "hyprland/language": {
+        "format": "{}"
+    },
+    "hyprland/submap": {
+        "format": "{}",
+        "max-length": 8
     },
     "keyboard-state": {
         "numlock": true,
