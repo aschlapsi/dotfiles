@@ -14,6 +14,7 @@ Required packages:
 - swaync
 - thunar
 - pavucontrol
+- brightnessctl
 
 Optional packages
 
