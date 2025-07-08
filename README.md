@@ -18,6 +18,7 @@ Required packages:
 - otf-font-awesome
 - ttf-cascadia-mono-nerd
 - chromium
+- pamixer
 
 Optional packages
 
