@@ -17,6 +17,7 @@ Required packages:
 - brightnessctl
 - otf-font-awesome
 - ttf-cascadia-mono-nerd
+- chromium
 
 Optional packages
 
