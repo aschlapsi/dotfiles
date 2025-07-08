@@ -17,7 +17,9 @@
 	      "hyprland/submap",
       	"hyprland/language",
         "pulseaudio",
+        "cpu",
         "network",
+        "bluetooth",
         "battery",
 //        "battery#bat2",
         "tray",
@@ -25,11 +27,40 @@
     ],
     // Modules configuration
     "hyprland/workspaces": {
-        "format": "{name}: {icon}",
+        "on-click": "activate",
+        "format": "{icon}",
         "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
             "active": "",
             "default": ""
+//        },
+//        "persistent-workspaces": {
+//            "1": [],
+//            "2": [],
+//            "3": [],
+//            "4": [],
+//            "5": []
         }
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "",
+        "tooltip-format": "Devices connected: {num_connections}",
+        "on-click": "kitty bluetui"
+    },
+    "cpu": {
+      "interval": 5,
+      "format": "󰍛",
+      "on-click": "kitty btop"
     },
     "hyprland/language": {
         "format": "{}"
@@ -75,7 +106,7 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10,
+          "spacing": 10
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
@@ -113,14 +144,27 @@
         "power-saver": ""
       }
     },
+//    "network": {
+//        // "interface": "wlp2*", // (Optional) To force the use of this interface
+//        "format-wifi": "{signalStrength}% ",
+//        "format-ethernet": "{ipaddr}/{cidr} ",
+//        "tooltip-format": "{ifname} via {gwaddr} ",
+//        "format-linked": "{ifname} (No IP) ",
+//        "format-disconnected": "Disconnected ⚠",
+//        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+//    },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+      "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+      "format" : "{icon}",
+      "format-wifi" : "{icon}",
+      "format-ethernet" : "󰀂",
+      "format-disconnected" : "󰖪",
+      "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+      "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+      "tooltip-format-disconnected": "Disconnected",
+      "interval": 3,
+      "nospacing": 1,
+      "on-click": "kitty iwctl"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -139,7 +183,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-right": "pamixer -t"
     },
     "custom/media": {
         "format": "{icon} {text}",

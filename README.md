@@ -15,6 +15,8 @@ Required packages:
 - thunar
 - pavucontrol
 - brightnessctl
+- otf-font-awesome
+- ttf-cascadia-mono-nerd
 
 Optional packages
 
