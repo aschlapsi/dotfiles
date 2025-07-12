@@ -13,7 +13,7 @@ Required packages:
 - hyprpicker
 - wofi
 - swaync
-- dolphin
+- thunar
 - pavucontrol
 - brightnessctl
 - otf-font-awesome
