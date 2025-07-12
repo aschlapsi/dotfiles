@@ -10,15 +10,17 @@ Required packages:
 - hyprlock
 - hypridle
 - hyprpaper
+- hyprpicker
 - wofi
 - swaync
-- thunar
+- dolphin
 - pavucontrol
 - brightnessctl
 - otf-font-awesome
 - ttf-cascadia-mono-nerd
 - chromium
 - pamixer
+- cliphist
 
 Optional packages
 
