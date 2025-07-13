@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+directory=$HOME/.config/backgrounds
+
+selection=$(ls $directory/ | sed /wallpaper\.jpg/d | sed s/\.jpg//g | sort -u | wofi --show dmenu --prompt "Select background" --width 40% --height 195)
+
+echo $selection
+
+rm -f $directory/wallpaper.jpg
+ln -s $directory/$selection.jpg $directory/wallpaper.jpg
+
+pkill hyprpaper && hyprpaper &
+
