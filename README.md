@@ -18,9 +18,9 @@ Required packages:
 - brightnessctl
 - otf-font-awesome
 - ttf-cascadia-mono-nerd
-- chromium
 - pamixer
 - cliphist
+- flatpak
 
 Optional packages
 
@@ -30,4 +30,8 @@ Optional packages
 - neovim
 - GNU Emacs
 - VS Code
+
+Flatpaks:
+
+- Ungoogled chromium
 
