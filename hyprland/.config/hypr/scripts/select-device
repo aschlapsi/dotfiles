@@ -1,0 +1,7 @@
+#!/bin/bash
+
+selection=$(ls $HOME/.config/hypr/device-dependent/ | sed /current\.conf/d | sed s/\.conf//g | sort -u | wofi --show dmenu --prompt "Select device" --width 40% --height 195)
+
+rm -f $HOME/.config/hypr/device-dependent/current.conf
+ln -s $HOME/.config/hypr/device-dependent/$selection.conf $HOME/.config/hypr/device-dependent/current.conf
+
