@@ -8,8 +8,6 @@ show_power_menu() {
 \u2063󰐥 Shutdown"
   local selection=$(echo -e "$menu_options" | wofi --show dmenu --prompt "Power options" --width 150 --height 195 -O alphabetical)
 
-  echo $selection
-
   case "$selection" in
   *Lock*) hyprlock ;;
   *Shutdown*) systemctl suspend ;;
